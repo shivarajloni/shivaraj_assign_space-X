@@ -15,13 +15,48 @@ class App extends Component {
     this.state = {
       items: [],
       isLoaded: false,
+      filters: {
+        limit: 150,
+        launch_year: undefined,
+        launch_success: undefined,
+        land_success: undefined,
       },
     }
-
-  }
+    }
 
   getUpdatedApiUrl(filters = {}) {
     return API_BASE_URL + querystring.stringify({ ...filters });
+  }
+
+  fetchAPI(filters) {
+    const URL = this.getUpdatedApiUrl(filters);
+    this.setState({ isLoaded: false, filters });
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          isLoaded: true,
+          data
+        });
+      });
+  }
+
+  componentDidMount() {
+    this.fetchAPI(this.state.filters);
+  }
+
+  updateApiFilters(type, value) {
+    // if same value is clicked, we remove that filter
+    if (this.state.filters[type] === value) {
+      value = undefined;
+    }
+
+    const filters = {
+      ...this.state.filters,
+      [type]: value,
+    };
+
+    this.fetchAPI(filters);
   }
 
     const { isLoaded, data } = this.state;
