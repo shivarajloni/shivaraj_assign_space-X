@@ -135,7 +135,7 @@ class App extends Component {
                         }
                         value="true"
                       >
-                        True
+                        Success
                       </Button>
 
                       <Button
@@ -150,7 +150,7 @@ class App extends Component {
                         }
                         value="false"
                       >
-                        False
+                        Failure
                       </Button>
                     </div>
 
@@ -171,7 +171,7 @@ class App extends Component {
                         }
                         value="true"
                       >
-                        True
+                        Success
                       </Button>
 
                       <Button
@@ -186,7 +186,7 @@ class App extends Component {
                         }
                         value="false"
                       >
-                        False
+                        Failure
                       </Button>
                     </div>
                   </Card.Body>
