@@ -1,29 +1,35 @@
-.Rocket-details {
-    width: 18rem;
-    padding: 1rem;
-    margin-bottom: 15px;
+.Rocket-detail {
+    width: 20rem;
+    padding: 2rem;
+    margin-bottom: 18px;
+    background-color: #53575a;
+
 }
 
-.Rocket-mission-image {
-    background-color: #F2F2F2;
+.Rocket-image {
+    background-color: #92bbdd;
 }
 
 
-.Rocket-mission-name-flight-number {
-    color: #63659f;
+.Rocket-flight-number {
+    color: #e9da56;
     font-size: 20px;
-    font-style: normal;
+    font-style: initial;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 20px;
 }
 
-.Rocket-detail-label {
-    color: #181818;
+.Rocket-id-detail {
+    color: #0e0909;
     font-size: 18px;
-    font-weight: 500;
+    font-style:inherit;
+    font-weight: 450;
 }
 
-.Rocket-detail-value {
-    color: #63659f;
-    font-weight: 400;
+.Launch-year {
+    color: #1a1717;
+    font-style: oblique;
+    font-weight: 500;
+    background-color: #53575a;
 }
